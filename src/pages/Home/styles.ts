@@ -1,12 +1,14 @@
 import styled from "styled-components"
 
 export const Home = styled.section`
-  picture > img {
+  picture {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  aside > img {
+    display: flex;
+    justify-content: center;
     width: 100%;
-  }
-  aside {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 0.5rem;
-  }
+  } 
 `

@@ -2,6 +2,7 @@ import React from "react";
 import * as S from "./styles";
 import sh from "assets/img/SH/Partitura-the-game-is-on.png";
 import download from "assets/img/símbolo.png";
+import { BotaoComponent } from "components";
 import { Link } from "react-router-dom";
 
 const Sherlock = () => {

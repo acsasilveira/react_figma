@@ -17,4 +17,5 @@ export const Section = styled.section`
     div img {
         width: 50%;
     }
+
 `
