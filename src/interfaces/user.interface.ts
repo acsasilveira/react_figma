@@ -15,6 +15,18 @@ export interface IResponseUser {
         expires_at: string
     }
 }
+
+export interface IAuthContextData {
+    signIn(credentials: IUser): Promise<void>
+    signOut(): Promise<void>
+    loadUserStorageData(): Promise<boolean>
+    user: {
+        id: number
+        email: string
+        name: string
+    }
+}
+
 export interface IAuthProvider {
     children?: ReactNode
 }

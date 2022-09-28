@@ -1,13 +1,43 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { FormEvent } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { FaKey } from "react-icons/fa";
 import { BsFillPersonFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
+import { toast } from "react-toastify";
 
 import * as S from "./styles";
 import { ButtonComponent } from "components";
+import { IErrorResponse, IUser } from "interfaces/user.interface";
+import { AxiosError } from "axios";
+import { apiUser } from "services/data";
 
 const Cadastrar = () => {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState<IUser>({
+    name: '';
+    email: '';
+    password: '';
+  })
+  async function handleChange(e: IUser) {
+    setFormData((state: IUser | undefined) => ({...state, ...e}))
+  }
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    try{
+      await apiUser.register(formData);
+      toast.success("Cadastro realizado com sucesso!");
+      navigate('/login')
+    } catch(error) {
+      const err = error as AxiosError<IErrorResponse>
+      let messages = err.response?.data.message
+      if (err.response?.data.errors) {
+        messages = err.response?.data.errors?.map((i) => i.message)
+          .reduce((total, cur) => `${total} ${cur}`)
+      }
+      toast.error(messages)
+    }
+  }
+
   return (
     <S.Section>
       <h1>Cadastre-se</h1>

@@ -61,7 +61,7 @@ const AuthProvider: React.FC<IAuthProvider> = ({ children }) => {
                 user: auth.user,
             }}
             >
-                {children}
+            {children}
         </AuthContext.Provider>
     )
 }

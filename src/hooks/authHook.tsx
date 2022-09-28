@@ -2,7 +2,7 @@ import { AuthContext } from "contexts/authContext"
 import { IAuthContextData } from "interfaces/user.interface"
 import { useContext } from "react"
 
-fuction useAuth(): IAuthContextData {
+function useAuth(): IAuthContextData {
     const context = useContext(AuthContext)
     if (!context) {
         throw new Error('useAuth deve ser utilizado com o AuthProvider')
@@ -10,4 +10,4 @@ fuction useAuth(): IAuthContextData {
     return context
 }
 
-export  { useAuth }
+export { useAuth }
