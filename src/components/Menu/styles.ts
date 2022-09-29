@@ -30,6 +30,17 @@ export const Cabecalho = styled.header`
           font-size: 1.2em;
           color: ${colors.white};
         }
+        button { 
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+          text-decoration: none;
+          font-size: 1.2em;
+          color: ${colors.white};
+          border: 0;
+          background-color: transparent;
+          cursor: pointer;
+        }
       }
     }
   }
