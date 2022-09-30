@@ -1,5 +1,5 @@
-import { MenuComponent, RodapeComponent } from "components";
 import React from "react";
+import { MenuComponent, RodapeComponent } from "components";
 import { Outlet } from "react-router-dom";
 import * as S from "./styles";
 

@@ -6,9 +6,9 @@ import { Navigate, Outlet } from 'react-router-dom'
 export default function ProtectedRoute() {
     const [isLoading, setIsLoading] = useState(true);
     const [isAuth, setIsAuth] = useState(true);
-    const { loadUserStorageData } = useAuth()]
+    const { loadUserStorageData } = useAuth()
 
-    useEffect: (() => {
+    useEffect(() => {
         async function fetchData() {
             const verifyAuth = await loadUserStorageData()
             setIsAuth(verifyAuth)

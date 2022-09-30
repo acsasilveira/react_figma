@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { AdmPage, CadastrarPage, HomePage, LayoutPage, LoginPage, MenuPage, SherlockPage } from "pages";
 import ProtectedRoute from "./ProtectedRoute";
-import Adm from "pages/Adm";
+
 
 const Rotas = () => {
   return (

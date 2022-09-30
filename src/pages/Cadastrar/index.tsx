@@ -1,4 +1,4 @@
-import React, { FormEvent } from "react";
+import React, { FormEvent, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaKey } from "react-icons/fa";
 import { BsFillPersonFill } from "react-icons/bs";
@@ -14,9 +14,9 @@ import { apiUser } from "services/data";
 const Cadastrar = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState<IUser>({
-    name: '';
-    email: '';
-    password: '';
+    name: '',
+    email: '',
+    password: '',
   })
   async function handleChange(e: IUser) {
     setFormData((state: IUser | undefined) => ({...state, ...e}))

@@ -1,7 +1,7 @@
 import React from "react";
 import { GrLogout } from "react-icons/gr";
 import * as S from "./styles";
-import { BotaoComponent } from "components";
+import { BotaoComponent, MenuComponent } from "components";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "hooks/authHook";
 import User from "services/data/User";
@@ -25,7 +25,9 @@ const Menu = () => {
                 <button onClick={logout}>{user.name} <GrLogout /></button>
               </li>
             </ul>
-          ) : ()}
+          ) : (
+            null  
+          )}
       </nav>
       <div>
         <Link to="/sherlock">
