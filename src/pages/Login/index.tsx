@@ -30,7 +30,7 @@ const Login = () => {
         password: String(password),
       })
       toast.success("Login realizado com sucesso!");
-      navigate('/adm')
+      navigate('/menu')
     } catch (error) {
       const err = error as AxiosError<IErrorResponse>
       toast.error(String(err.response?.data))
@@ -59,9 +59,7 @@ const Login = () => {
         </div>
         <p>
           Não possui conta? <Link to="/cadastrar">Cadastre-se</Link>
-          <Link to="/menu">
             <ButtonComponent>Entrar</ButtonComponent>
-          </Link>
         </p>
       </form>
     </S.Section>

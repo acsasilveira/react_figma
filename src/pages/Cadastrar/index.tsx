@@ -68,9 +68,7 @@ const Cadastrar = () => {
         </div>
         <p>
           Já possui conta? <Link to="/login">Faça o login</Link>
-          <Link to="/menu">
             <ButtonComponent>Salvar</ButtonComponent>
-          </Link>
         </p>
       </form>
     </S.Section>

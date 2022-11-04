@@ -5,7 +5,7 @@ import { Navigate, Outlet } from 'react-router-dom'
 
 export default function ProtectedRoute() {
     const [isLoading, setIsLoading] = useState(true);
-    const [isAuth, setIsAuth] = useState(true);
+    const [isAuth, setIsAuth] = useState(false);
     const { loadUserStorageData } = useAuth()
 
     useEffect(() => {
