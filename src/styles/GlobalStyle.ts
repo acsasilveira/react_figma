@@ -4,12 +4,14 @@ import 'react-confirm-alert/src/react-confirm-alert.css';
 
 export default createGlobalStyle`
   * {
-    background-color: black;
     margin: 0;
     padding: 0;
     outline: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+  }
+  body{
+    background-color: black;
   }
 `
 export const colors = {
